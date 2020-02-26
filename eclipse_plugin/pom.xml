@@ -33,7 +33,7 @@
   </description>
 
   <properties>
-    <tycho-version>0.26.0</tycho-version>
+    <tycho-version>1.6.0</tycho-version>
   </properties>
 
   <repositories>
