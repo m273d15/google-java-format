@@ -22,10 +22,12 @@
   <parent>
     <groupId>com.google.googlejavaformat</groupId>
     <artifactId>google-java-format-parent</artifactId>
-    <version>1.8-SNAPSHOT</version>
+    <version>${revision}</version>
   </parent>
 
   <artifactId>google-java-format</artifactId>
+  <version>${revision}</version>
+  <packaging>jar</packaging>
 
   <name>Google Java Format</name>
 
