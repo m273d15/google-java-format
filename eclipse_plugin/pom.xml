@@ -20,11 +20,11 @@
   <parent>
     <groupId>com.google.googlejavaformat</groupId>
     <artifactId>google-java-format-parent</artifactId>
-    <version>1.6</version>
+    <version>${revision}</version>
   </parent>
 
   <artifactId>google-java-format-eclipse-plugin</artifactId>
-  <version>1.6.0</version>
+  <version>${revision}</version>
   <packaging>eclipse-plugin</packaging>
   <name>google-java-format Plugin for Eclipse 4.5+</name>
 
@@ -33,7 +33,7 @@
   </description>
 
   <properties>
-    <tycho-version>0.26.0</tycho-version>
+    <tycho-version>1.6.0</tycho-version>
   </properties>
 
   <repositories>
@@ -48,13 +48,12 @@
     <dependency>
       <groupId>com.google.googlejavaformat</groupId>
       <artifactId>google-java-format</artifactId>
-      <version>1.6</version>
+      <version>${revision}</version>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
-
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-maven-plugin</artifactId>

@@ -28,14 +28,14 @@
   <groupId>com.google.googlejavaformat</groupId>
   <artifactId>google-java-format-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.8-SNAPSHOT</version>
+  <version>${revision}</version>
 
   <modules>
     <module>core</module>
     <!-- google-java-format#24
     <module>idea_plugin</module>
-    <module>eclipse_plugin</module>
     -->
+    <module>eclipse_plugin</module>
   </modules>
 
   <name>Google Java Format Parent</name>
@@ -89,10 +89,11 @@
   </issueManagement>
 
   <prerequisites>
-    <maven>3.0.3</maven>
+    <maven>3.5.0</maven>
   </prerequisites>
 
   <properties>
+    <revision>1.8.0-SNAPSHOT</revision>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
     <guava.version>28.1-jre</guava.version>
