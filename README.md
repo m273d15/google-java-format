@@ -65,6 +65,13 @@ The plugin adds a `google-java-format` formatter implementation that can be
 configured in `Window > Preferences > Java > Code Style > Formatter > Formatter
 Implementation`.
 
+#### Running with Java 11
+
+Starting with the release `1.8`, the `google-java-format` plugin requires Java 11 or later to run.
+
+As a result, you will have to run Eclipse with Java 11 or higher to use the plugin.
+A guide on how to set the JVM for your local Eclipse instance is given on [the Eclipse wiki](https://wiki.eclipse.org/FAQ_How_do_I_run_Eclipse%3F#Find_the_JVM).
+
 ### Third-party integrations
 
 *   Gradle plugins
