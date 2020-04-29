@@ -35,6 +35,8 @@
 
   <properties>
     <tycho-version>1.6.0</tycho-version>
+    <!-- Skip javadoc build for Eclipse plugin to avoid issue https://bugs.openjdk.java.net/browse/JDK-8212233-->
+    <maven.javadoc.skip>true</maven.javadoc.skip>
   </properties>
 
   <repositories>
