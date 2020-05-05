@@ -18,14 +18,9 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.google.googlejavaformat</groupId>
-    <artifactId>google-java-format-parent</artifactId>
-    <version>1.6</version>
-  </parent>
-
+  <groupId>com.google.googlejavaformat</groupId>
   <artifactId>google-java-format-eclipse-plugin</artifactId>
-  <version>1.6.0</version>
+  <version>1.7.0</version>
   <packaging>eclipse-plugin</packaging>
   <name>google-java-format Plugin for Eclipse 4.5+</name>
 
@@ -34,7 +29,7 @@
   </description>
 
   <properties>
-    <tycho-version>1.6.0</tycho-version>
+    <tycho-version>1.7.0</tycho-version>
     <!-- Skip javadoc build for Eclipse plugin to avoid issue https://bugs.openjdk.java.net/browse/JDK-8212233-->
     <maven.javadoc.skip>true</maven.javadoc.skip>
   </properties>
@@ -51,12 +46,31 @@
     <dependency>
       <groupId>com.google.googlejavaformat</groupId>
       <artifactId>google-java-format</artifactId>
-      <version>1.6</version>
+      <version>1.7</version>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>2.10</version>
+            <executions>
+                <execution>
+                    <id>copy-dependencies</id>
+                    <phase>initialize</phase>
+                    <goals>
+                        <goal>copy-dependencies</goal>
+                    </goals>
+                    <configuration>
+                    <outputDirectory>lib</outputDirectory>
+                        <includeScope>runtime</includeScope>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
 
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
@@ -68,6 +82,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
         <configuration>
           <source>11</source>
           <target>11</target>
